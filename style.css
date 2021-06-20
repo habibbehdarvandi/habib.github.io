@@ -235,6 +235,7 @@ nav{
     width: auto;
     max-width: 700px;
     color: var(--text-color);
+    position: relative;
 }
 .works-list{
     display: flex;
@@ -318,6 +319,68 @@ nav{
 }
 
 /* =========================================== contact =========================================== */
+
+
+/* =========================================== modal =========================================== */
+.modal{
+    width: 95%;
+    max-width:500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--bg-color);
+    border-radius: 8px;
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    padding: 1rem 0;
+    transition: 0.5s all;
+    box-shadow: var(--shadow);
+}
+.modal-hidden{
+    top: 50%;
+    left: 50%;
+}
+.modal-header{
+    padding: 1rem 0;
+    width: 95%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+.modal-body{
+    width: 90%;
+    height: auto;
+}
+.modal-body a{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-body a i{
+    margin: 0 1rem;
+}
+.modal-body img{
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: 0.5s;
+}
+.modal-body img:hover{
+    transform: scale(1.01);
+}
+.btn-toggle-modal{
+    background: transparent;
+    color: var(--text-color);
+}
+/* =========================================== modal =========================================== */
 
 
 /* =========================================== footer =========================================== */

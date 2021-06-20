@@ -60,3 +60,34 @@ copyBtn.addEventListener('click' , ()=>{
 
 })
 
+const projectImages = document.querySelectorAll('.project-image');
+const modalCloseBtn = document.querySelector('.btn-toggle-modal')
+const modal = document.querySelector('.modal')
+const modalTitle = document.querySelector('.modal-title')
+const modalImage = document.querySelector('.modal-image')
+const closeModalBtn = document.querySelector('.btn-toggle-modal')
+const modalSite = document.querySelector('.modal-site')
+
+projectImages.forEach(e =>{
+    e.addEventListener('click',(e)=>{
+        e.preventDefault()
+        var item = e.target;
+
+        createModal(item.innerText,item.getAttribute('href'))
+
+    })
+})
+
+
+function createModal(title,imageSrc){
+    modalTitle.innerHTML = title;
+    var image = imageSrc;
+    modalImage.setAttribute('src',image)
+    modalSite.setAttribute('href',image)
+    
+    modal.classList.toggle('modal-hidden')
+
+}
+closeModalBtn.addEventListener('click',()=>{
+    modal.classList.toggle('modal-hidden')
+})
