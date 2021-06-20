@@ -334,8 +334,8 @@ nav{
     border: 1px solid var(--bg-color);
     border-radius: 8px;
     position: absolute;
-    top: -60%;
-    left: -60%;
+    top: -100%;
+    left: -100%;
     transform: translate(-50%,-50%);
     z-index: 999;
     padding: 1rem 0;
